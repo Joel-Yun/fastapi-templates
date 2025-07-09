@@ -3,6 +3,6 @@ from fastapi.responses import HTMLResponse
 
 from routers.page.main import main_router
 
-router = APIRouter(prefix="", default_response_class=HTMLResponse)
+page_router = APIRouter(default_response_class=HTMLResponse)
 
-router.include_router(main_router.router, prefix="/")
+page_router.include_router(main_router.router)
