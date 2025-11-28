@@ -1,0 +1,6 @@
+{
+    "LOGGING": {
+		"LOG_FILE_PATH": "",
+		"LOG_LEVEL": "INFO"
+	}
+}

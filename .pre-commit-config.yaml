@@ -5,11 +5,26 @@ repos:
     rev: v5.0.0
     hooks:
     -   id: trailing-whitespace
+        files: ^src/
     -   id: end-of-file-fixer
+        files: ^src/
     -   id: check-yaml
+        files: ^src/
     -   id: check-added-large-files
-repos:
+        files: ^src/
+
 -   repo: https://github.com/psf/black
     rev: 25.1.0
     hooks:
     -   id: black
+        files: ^src/
+
+-   repo: local
+    hooks:
+    -   id: pytest
+        name: pytest
+        entry: pytest test/
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
